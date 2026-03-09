@@ -71,7 +71,7 @@ The app runs with the standard Expo workflow; no eject or custom native build is
 - **Routing**: Expo Router (file-based). Main screen is `index` (root); “Add task” is a **modal** route `add-task`. No bottom tab bar.
 - **State**: React Context (`TasksContext`) holds the task list, active filter, and loading flag. It loads from storage on mount and writes back when tasks change.
 - **Persistence**: `taskStorage` service uses `@react-native-async-storage/async-storage` with a single JSON array key. No backend required.
-- **UI**: Reuses your design system: `ScreenRootWrapper` on all screens, atoms (buttons, inputs, text, header) and molecules (filter chips, task row, empty state). Validation and empty states are handled in the UI layer.
+- **UI**: Reuses design system: `ScreenRootWrapper` on all screens, atoms (buttons, inputs, text, header) and molecules (filter chips, task row, empty state). Validation and empty states are handled in the UI layer.
 
 ## UI and UX
 
@@ -95,8 +95,7 @@ The app runs with the standard Expo workflow; no eject or custom native build is
 - **Expo Router** (no React Navigation direct usage for routing)
 - **@react-native-async-storage/async-storage** for local persistence
 - **Lucide React Native** for icons (e.g. list, chevron)
-- Existing project components and utilities (ScreenRootWrapper, CustomButton, CustomInput, etc.)
+- Components and utilities (ScreenRootWrapper, CustomButton, CustomInput, etc.)
 
-## License
 
-Private / use as needed for this project.
+If given more time, I would have come up with a better ui design and color combinations for better user experience and appeal. Also, I could have used a more robost storage system, like sqlite or the recommended WaterMelonDB, for larger storage. Also it could have been better if a Figma design was provided, but I understand that the focus of this test is more on code structure.
